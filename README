@@ -1,0 +1,53 @@
+DESCRIPTION
+
+JSLint (www.JSLint.com) is a code quality tool for JavaScript that scans
+JavaScript code for errors and potential improvements. JSLint is written in
+JavaScript and a Rhino edition is available to run on the command line. This
+script allows the Rhino edition to be run on node.js exactly as if it ran on
+Rhino.
+
+
+INSTALLATION
+
+Just download the jslint.js file or clone the repository.
+
+
+USAGE
+
+node jslint.js [file to check]
+
+
+GLOBAL COMMENTS
+
+JSLint recognizes special comments in your files that tell it to ignore certain
+globals when reporting unknown references. For instance, require, exports, and
+process are node.js global variables that JSLint is unaware of. Putting this in
+your files will tell JSLint to ignore these variables:
+
+/*global require, exports, process */
+
+
+CONFIGURATION COMMENTS
+
+You can extensively customize JSLint with *jslint */ comments. For more
+information, see: 
+
+http://www.JSLint.com/lint.html
+
+
+IMPLEMENTATION
+
+The incompatibility of the Rhino edition with node.js is simply because of
+differences in builtin API between Rhino and node.js. The script is the
+original Rhino edition script with a small shim inserted that translates the
+node.js API into the Rhino API. Nothing else is changed.
+
+
+CREDIT
+
+JSLint is by Douglas Crockford (www.crockford.com).
+
+
+FEEDBACK
+
+Feedback welcome at node@thomassmith.com.
