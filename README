@@ -29,7 +29,7 @@ your files will tell JSLint to ignore these variables:
 
 CONFIGURATION COMMENTS
 
-You can extensively customize JSLint with *jslint */ comments. For more
+You can extensively customize JSLint with /*jslint */ comments. For more
 information, see: 
 
 http://www.JSLint.com/lint.html
